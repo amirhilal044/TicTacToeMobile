@@ -48,6 +48,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:contentDescription="@string/app_name"
+            android:textSize="20sp"
             />
 
         <Button
@@ -55,14 +56,17 @@
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"/>
 
         <Button
             android:id="@+id/button_2"
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
     </LinearLayout>
 
@@ -76,21 +80,27 @@
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
         <Button
             android:id="@+id/button_4"
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
         <Button
             android:id="@+id/button_5"
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
     </LinearLayout>
 
@@ -104,21 +114,27 @@
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
         <Button
             android:id="@+id/button_7"
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
         <Button
             android:id="@+id/button_8"
             android:layout_margin="3dp"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:contentDescription="@string/app_name" />
+            android:contentDescription="@string/app_name"
+            android:textSize="20sp"
+            />
 
     </LinearLayout>
     <LinearLayout
