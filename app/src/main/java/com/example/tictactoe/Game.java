@@ -9,6 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 public class Game extends AppCompatActivity implements View.OnClickListener {
 
@@ -117,6 +123,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void player1Wins() {
+        updateScore(player1Name.getText().toString());
         Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_LONG).show();
         resetBoard();
     }
@@ -124,6 +131,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
 
 
     private void player2Wins() {
+        updateScore(player2Name.getText().toString());
         Toast.makeText(this, "Player 2 wins!", Toast.LENGTH_LONG).show();
         resetBoard();
     }
@@ -142,4 +150,24 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         roundCount = 0;
         player1Turn = true;
     }
+
+    private void updateScore(String username) {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance("https://tictactoemobile-default-rtdb.europe-west1.firebasedatabase.app").getReference();
+        DatabaseReference userRef = mDatabase.child("Users").child(username);
+
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                User user = dataSnapshot.getValue(User.class);
+                user.incrementScore();
+                userRef.setValue(user);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                throw databaseError.toException();
+            }
+        });
+    }
+
 }
