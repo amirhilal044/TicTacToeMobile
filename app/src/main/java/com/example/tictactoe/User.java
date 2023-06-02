@@ -9,7 +9,7 @@ public class User {
     }
 
     public User(String username, int score) {
-        this.username = username;
+        this.username = username.toLowerCase();
         this.score = score;
     }
 

@@ -12,9 +12,6 @@
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
         <activity
-            android:name=".WinSituation"
-            android:exported="false" />
-        <activity
             android:name=".LoginPlayers"
             android:exported="false" />
         <activity
